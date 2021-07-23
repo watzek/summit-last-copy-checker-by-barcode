@@ -98,6 +98,11 @@ class main{
 
 </div>
 </form>
+<hr>
+
+
+
+
 
     <?php
 
@@ -208,7 +213,7 @@ class main{
     $t=time();
 
     $myfile = fopen("files/$t.txt", "w");
-    $_SESSION["file"]="$t.txt";
+    $_SESSION["file"]="$code-$t.txt";
     $_SESSION["barcodes"]=array();
 
   }
@@ -287,11 +292,11 @@ class main{
       foreach ($record->datafield as $df){
         if($df->attributes()->tag=="035"){
           $o=$df->subfield;
-          echo $o;
+          #echo $o;
 
           if(strpos($o, "NETWORK)")){
             $a=explode("NETWORK)", $o);
-            echo $a[1];
+            #echo $a[1];
 
             //exit();
             return $a[1];
@@ -299,7 +304,7 @@ class main{
           }
           else{
 
-            echo "didn't";
+            #echo "didn't";
           }
         }
 

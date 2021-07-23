@@ -51,10 +51,11 @@ if($state=="readBarcode"){
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">weeding</a>
+      <a class="navbar-brand" href="index.php">Summit Last Copy Checker</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!--
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
@@ -62,18 +63,9 @@ if($state=="readBarcode"){
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <!--
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>-->
+
         </ul>
-      </div>
+      </div>-->
 
     </div>
 
@@ -134,7 +126,21 @@ $main->switchboard($state);
   <!-- Footer -->
   <footer class="py-5 ">
     <div class="container">
-      <p class="m-0 text-center text-white"></p>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-6">What is this?</h1>
+          <p class="lead">Say you have a cart of books to weed, and want to check "last copy" status for each. By scanning each barcode, you'll see a message on whether it's the last copy. If it isn't the barcode will be added to a text file, which you can download when you're finished (for later loading into Alma).</p>
+          <p>The steps:</p>
+          <ul>
+            <li>Select your institution.</li>
+            <li>Click "Begin a new text file of barcodes".</li>
+            <li>Scan each barcode in turn, taking care to view the response (you may want to set your last copies aside, etc.).</li>
+            <li>When finished, click "I'm done scanning, and ready to download the text file".</li>
+            <li>On the resulting page, click "Download file". This will give you a text file of non-last copy barodes.</li>
+          </ul>
+
+        </div>
+      </div>
     </div>
     <!-- /.container -->
   </footer>
